@@ -110,6 +110,7 @@ void displayBand(int band, int dsize)
   }
 }
 
+//Listen for any messages from MQTT server
 void ConnectionCheck(void * parameter) {
   for (;;) {
     MQTT_connect();
@@ -157,7 +158,7 @@ void setup() {
 
   mqtt.subscribe(&Mode);
 
-  
+
   //Using One core for connection check
   xTaskCreatePinnedToCore(
     ConnectionCheck,          // Function that should be called
