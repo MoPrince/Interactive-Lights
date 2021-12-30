@@ -1,4 +1,4 @@
-# Interactive-Lights
+# Interactive-Lights-ESP32
 
 By: Mo & other online resources
 
