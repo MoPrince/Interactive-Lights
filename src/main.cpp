@@ -156,6 +156,9 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   mqtt.subscribe(&Mode);
+
+  
+  //Using One core for connection check
   xTaskCreatePinnedToCore(
     ConnectionCheck,          // Function that should be called
     "Connection Check",     // Name of the task (for debugging)
